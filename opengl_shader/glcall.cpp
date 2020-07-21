@@ -4,6 +4,9 @@
 void __glCheckError__(unsigned int err, int line, const std::string& file, const std::string& expression) {
 	std::string error;
 	switch (err) {
+	case GL_NO_ERROR:
+		return;
+		break;
 	case GL_INVALID_ENUM:
 		error = "invalid enum";
 		break;
