@@ -1,11 +1,6 @@
 #include "glcall.h"
 #include <sstream>
 #include <exception>
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <iostream>
-#endif
 void __glCheckError__(unsigned int err, int line, const std::string& file, const std::string& expression) {
 	std::string error;
 	switch (err) {

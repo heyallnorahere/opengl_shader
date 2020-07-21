@@ -14,7 +14,7 @@ private:
 };
 class shader {
 public:
-	shader(const std::string& name);
+	shader(const std::string& name, bool geometry_shader = false);
 	~shader();
 	static void use(shader*);
 	uni& get_uniforms();
@@ -25,4 +25,5 @@ private:
 	void create(const std::string& name);
 	unsigned int id;
 	uni* uniforms;
+	bool geometry_shader;
 };

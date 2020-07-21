@@ -27,7 +27,7 @@ static std::string read_shader(const std::string& path) {
 }
 static unsigned int create_shader(const std::string name, unsigned int type) {
 	unsigned int shader = glCall(glCreateShader(type));
-	std::string path = "shaders/" + name + "/" + (type == GL_VERTEX_SHADER ? "vertex" : "fragment") + ".shader";
+	std::string path = "shaders/" + name + "/" + (type == GL_VERTEX_SHADER ? "vertex" : (type == GL_FRAGMENT_SHADER ? "fragment" : "geometry")) + ".shader";
 	std::string source = read_shader(path);
 	const char* src = source.c_str();
 	glCall(glShaderSource(shader, 1, &src, NULL));
@@ -44,10 +44,13 @@ static unsigned int create_shader(const std::string name, unsigned int type) {
 void shader::create(const std::string& name) {
 	this->id = glCall(glCreateProgram());
 	this->uniforms = new uni(this->id);
+	unsigned int gs = NULL;
 	auto vs = create_shader(name, GL_VERTEX_SHADER);
 	auto fs = create_shader(name, GL_FRAGMENT_SHADER);
+	if (this->geometry_shader) gs = create_shader(name, GL_GEOMETRY_SHADER);
 	glCall(glAttachShader(this->id, vs));
 	glCall(glAttachShader(this->id, fs));
+	if (gs) glCall(glAttachShader(this->id, gs));
 	glCall(glLinkProgram(this->id));
 	int success;
 	glGetProgramiv(this->id, GL_LINK_STATUS, &success);
@@ -58,8 +61,9 @@ void shader::create(const std::string& name) {
 	}
 	glDeleteShader(vs);
 	glDeleteShader(fs);
+	if (gs) glDeleteShader(gs);
 }
-shader::shader(const std::string& name) : name(name) {
+shader::shader(const std::string& name, bool geometry_shader) : name(name), geometry_shader(geometry_shader) {
 	this->create(this->name);
 }
 void shader::reload() {
