@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>opengl_shader</id>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <description>
       please report any issues to the github repo, put shaders in "shaders/{shader name}/{type of shader}.shader
     </description>
@@ -11,7 +11,6 @@
     <license type="file">metadata/LICENSE.txt</license>
     <authors>Theo Beda</authors>
     <dependencies>
-      <dependency id="assimp.v140" version="3.2.0"/>
       <dependency id="glm" version="0.9.9.800"/>
       <dependency id="unofficial-flayan-glew" version="2.1.0"/>
     </dependencies>
