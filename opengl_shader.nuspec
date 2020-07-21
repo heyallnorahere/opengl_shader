@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>opengl_shader</id>
+    <version>1.0</version>
+    <description>
+      please report any issues to the github repo, put shaders in "shaders/{shader name}/{type of shader}.shader
+    </description>
+    <tags>Native native OpenGL opengl Opengl static Static</tags>
+    <projectUrl>https://github.com/yodasoda1219/opengl_shader</projectUrl>
+    <license type="file">metadata/LICENSE.txt</license>
+    <authors>Theo Beda</authors>
+    <dependencies>
+      <dependency id="assimp.v140" version="3.2.0"/>
+      <dependency id="glm" version="0.9.9.800"/>
+      <dependency id="unofficial-flayan-glew" version="2.1.0"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="x64\Release\opengl_shader.lib" target="build/native/lib/x64/Release"/>
+    <file src="x64\Debug\opengl_shader.lib" target="build/native/lib/x64/Debug"/>
+    <file src="opengl_shader\include\*.h" target="build/native/include"/>
+    <file src="opengl_shader.props" target="build/native"/>
+    <file src="LICENSE.txt" target="metadata/LICENSE.txt"/>
+  </files>
+</package>

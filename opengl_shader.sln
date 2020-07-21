@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{626459A1-F737-4412-95ED-EB98637528DE}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		opengl_shader.nuspec = opengl_shader.nuspec
+		opengl_shader.props = opengl_shader.props
 	EndProjectSection
 EndProject
 Global
