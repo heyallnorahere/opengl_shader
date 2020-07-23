@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ModelLoaderLibs Condition="'$(Configuration.ToLower())' == 'release'" Include="$(MSBuildThisFileDirectory)lib\x64\Release\*.lib" />
-    <ModelLoaderLibs Condition="'$(Configuration.ToLower())' == 'debug'" Include="$(MSBuildThisFileDirectory)lib\x64\Debug\*.lib" />
+    <ShaderLibs Condition="'$(Configuration.ToLower())' == 'release'" Include="$(MSBuildThisFileDirectory)lib\x64\Release\*.lib" />
+    <ShaderLibs Condition="'$(Configuration.ToLower())' == 'debug'" Include="$(MSBuildThisFileDirectory)lib\x64\Debug\*.lib" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Expland the items to a property -->
-    <ModelLoaderLibraries>@(ShaderLibs)</ModelLoaderLibraries>
+    <ShaderLibraries>@(ShaderLibs)</ShaderLibraries>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(ShaderLibs);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ShaderLibraries);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
 </Project>

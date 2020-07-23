@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>opengl_shader</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <description>
       please report any issues to the github repo, put shaders in "shaders/{shader name}/{type of shader}.shader
     </description>
