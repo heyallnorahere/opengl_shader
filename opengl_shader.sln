@@ -13,16 +13,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		opengl_shader.props = opengl_shader.props
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shader_test", "shader_test\shader_test.vcxproj", "{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7DDF24D3-4A72-40C7-85EB-E755DFFB326E} = {7DDF24D3-4A72-40C7-85EB-E755DFFB326E}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7DDF24D3-4A72-40C7-85EB-E755DFFB326E}.Debug|x64.ActiveCfg = Debug|x64
 		{7DDF24D3-4A72-40C7-85EB-E755DFFB326E}.Debug|x64.Build.0 = Debug|x64
+		{7DDF24D3-4A72-40C7-85EB-E755DFFB326E}.Debug|x86.ActiveCfg = Debug|x64
 		{7DDF24D3-4A72-40C7-85EB-E755DFFB326E}.Release|x64.ActiveCfg = Release|x64
 		{7DDF24D3-4A72-40C7-85EB-E755DFFB326E}.Release|x64.Build.0 = Release|x64
+		{7DDF24D3-4A72-40C7-85EB-E755DFFB326E}.Release|x86.ActiveCfg = Release|x64
+		{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}.Debug|x64.ActiveCfg = Debug|x64
+		{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}.Debug|x64.Build.0 = Debug|x64
+		{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}.Debug|x86.ActiveCfg = Debug|Win32
+		{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}.Debug|x86.Build.0 = Debug|Win32
+		{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}.Release|x64.ActiveCfg = Release|x64
+		{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}.Release|x64.Build.0 = Release|x64
+		{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}.Release|x86.ActiveCfg = Release|Win32
+		{AAB621B3-82E3-4911-BB4D-F325A1CBDA58}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
